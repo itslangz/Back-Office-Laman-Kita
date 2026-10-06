@@ -160,11 +160,7 @@
     }
 
     function handleDeleteInnovation(id, title) {
-        if (confirm(`Yakin ingin menghapus link "${title}"?`)) {
-            BolataStore.deleteInnovationLink(id);
-            showAlert(`Link inovasi "${title}" berhasil dihapus.`);
-            renderInnovations();
-        }
+        alert(`Mode Preview Statis: Link inovasi "${title}" tidak dapat dihapus agar kelengkapan tampilan demo tetap terjaga.`);
     }
 
     document.addEventListener('DOMContentLoaded', () => {

@@ -170,11 +170,7 @@
     }
 
     function handleDeleteUser(id, name) {
-        if (confirm(`Yakin ingin menghapus user ${name}?`)) {
-            BolataStore.deleteUser(id);
-            showAlert(`User ${name} berhasil dihapus.`);
-            renderUsers();
-        }
+        alert(`Mode Preview Statis: Data user "${name}" tidak dapat dihapus agar kelengkapan tampilan demo tetap terjaga.`);
     }
 
     document.addEventListener('DOMContentLoaded', () => {

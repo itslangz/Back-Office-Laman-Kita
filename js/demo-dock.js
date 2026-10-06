@@ -124,10 +124,10 @@
                     ${linksHtml}
                 </div>
                 <div class="dock-footer">
-                    <button type="button" class="dock-reset-btn" id="dock-reset-btn" title="Kembalikan data ke awal">
-                        🔄 Reset Data Demo
-                    </button>
-                    <span class="dock-gh-badge">GitHub Pages Ready</span>
+                    <span style="font-size: 11px; color: #94A3B8; display: inline-flex; align-items: center; gap: 5px;">
+                        <span>🔒</span> <span>Data Paten (Read-Only)</span>
+                    </span>
+                    <span class="dock-gh-badge">GitHub Pages</span>
                 </div>
             </div>
 
@@ -142,7 +142,6 @@
         const trigger = document.getElementById('dock-trigger-btn');
         const panel = document.getElementById('dock-panel');
         const closeBtn = document.getElementById('dock-close-btn');
-        const resetBtn = document.getElementById('dock-reset-btn');
 
         trigger.addEventListener('click', () => {
             panel.classList.toggle('show');
@@ -177,19 +176,6 @@
                 }
             });
         });
-
-        // Reset data handling
-        if (resetBtn) {
-            resetBtn.addEventListener('click', () => {
-                if (confirm('Kembalikan semua data demo (user, tim, link) ke pengaturan awal?')) {
-                    if (typeof BolataStore !== 'undefined') {
-                        BolataStore.resetData();
-                        alert('Data demo berhasil direset ke pengaturan awal!');
-                        window.location.reload();
-                    }
-                }
-            });
-        }
     }
 
     if (document.readyState === 'loading') {

@@ -154,12 +154,7 @@
         document.getElementById('create-user-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const team_id = document.getElementById('team_id').value ? parseInt(document.getElementById('team_id').value, 10) : null;
-            const role = document.getElementById('role').value;
-
-            BolataStore.addUser({ name, email, team_id, role });
-            sessionStorage.setItem('bolata_flash', `User "${name}" berhasil ditambahkan.`);
+            sessionStorage.setItem('bolata_flash', `Mode Preview Statis: Simulasi input "${name}" berhasil (data dummy tetap paten).`);
             window.location.href = 'admin-users.html';
         });
     });

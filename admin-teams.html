@@ -165,11 +165,7 @@
     }
 
     function handleDeleteTeam(id, name) {
-        if (confirm(`Yakin ingin menghapus tim "${name}"? Semua link tim juga akan dihapus.`)) {
-            BolataStore.deleteTeam(id);
-            showAlert(`Tim "${name}" berhasil dihapus.`);
-            renderTeams();
-        }
+        alert(`Mode Preview Statis: Data tim "${name}" tidak dapat dihapus agar kelengkapan tampilan demo tetap terjaga.`);
     }
 
     document.addEventListener('DOMContentLoaded', () => {

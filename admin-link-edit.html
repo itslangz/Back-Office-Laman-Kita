@@ -156,15 +156,8 @@
 
         document.getElementById('edit-link-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            const team_id = parseInt(document.getElementById('team_id').value, 10);
             const title = document.getElementById('title').value.trim();
-            const url = document.getElementById('url').value.trim();
-            const description = document.getElementById('description').value.trim();
-
-            if (link) {
-                BolataStore.updateLink(link.id, { team_id, title, url, description });
-                sessionStorage.setItem('bolata_flash', `Link "${title}" berhasil diperbarui.`);
-            }
+            sessionStorage.setItem('bolata_flash', `Mode Preview Statis: Simulasi perbarui link "${title}" berhasil (data dummy tetap paten).`);
             window.location.href = 'admin-links.html';
         });
     });

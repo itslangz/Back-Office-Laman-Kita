@@ -133,12 +133,7 @@
         document.getElementById('edit-team-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('name').value.trim();
-            const description = document.getElementById('description').value.trim();
-
-            if (team) {
-                BolataStore.updateTeam(team.id, { name, description });
-                sessionStorage.setItem('bolata_flash', `Tim "${name}" berhasil diperbarui.`);
-            }
+            sessionStorage.setItem('bolata_flash', `Mode Preview Statis: Simulasi perbarui tim "${name}" berhasil (data dummy tetap paten).`);
             window.location.href = 'admin-teams.html';
         });
     });

@@ -139,13 +139,7 @@
         document.getElementById('edit-innovation-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const title = document.getElementById('title').value.trim();
-            const url = document.getElementById('url').value.trim();
-            const description = document.getElementById('description').value.trim();
-
-            if (link) {
-                BolataStore.updateInnovationLink(link.id, { title, url, description });
-                sessionStorage.setItem('bolata_flash', `Link inovasi "${title}" berhasil diperbarui.`);
-            }
+            sessionStorage.setItem('bolata_flash', `Mode Preview Statis: Simulasi perbarui inovasi "${title}" berhasil (data dummy tetap paten).`);
             window.location.href = 'admin-innovation-links.html';
         });
     });
