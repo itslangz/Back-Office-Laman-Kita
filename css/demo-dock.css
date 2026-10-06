@@ -1,0 +1,320 @@
+/* ==========================================================================
+   BOLATA - DEMO NAVIGATOR DOCK STYLES
+   Floating helper for GitHub Pages evaluation & role switching
+   ========================================================================== */
+
+.bolata-demo-dock {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.dock-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 18px;
+    border-radius: 999px;
+    background: #1E293B;
+    color: #FFFFFF;
+    border: 1px solid rgba(247, 148, 29, 0.4);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35), 0 0 16px rgba(247, 148, 29, 0.2);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.dock-trigger-btn:hover {
+    background: #0F172A;
+    border-color: #F7941D;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.5), 0 0 22px rgba(247, 148, 29, 0.35);
+}
+
+.dock-pulse-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #8DC63F;
+    box-shadow: 0 0 10px #8DC63F;
+    animation: dockDotPulse 2s infinite;
+}
+
+@keyframes dockDotPulse {
+    0% { transform: scale(0.9); opacity: 0.8; }
+    50% { transform: scale(1.3); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.dock-panel {
+    display: none;
+    position: absolute;
+    bottom: 56px;
+    right: 0;
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    max-height: 84vh;
+    background: #1E293B;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    flex-direction: column;
+    animation: dockSlideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dock-panel.show {
+    display: flex;
+}
+
+@keyframes dockSlideUp {
+    from { opacity: 0; transform: translateY(12px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.dock-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #0F172A, #1E293B);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dock-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dock-logo-mini {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dock-logo-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dock-title {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.dock-subtitle {
+    font-size: 11px;
+    color: #F7941D;
+    font-weight: 600;
+    display: block;
+}
+
+.dock-close-btn {
+    background: transparent;
+    border: none;
+    color: #94A3B8;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.dock-close-btn:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dock-body {
+    padding: 16px 18px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.dock-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #94A3B8;
+    margin: 14px 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dock-section-title:first-child {
+    margin-top: 0;
+}
+
+/* User switcher in dock */
+.dock-role-switcher {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 14px;
+}
+
+.dock-current-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dock-current-user .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+}
+
+.dock-user-desc {
+    font-size: 12.5px;
+    color: #CBD5E1;
+    line-height: 1.25;
+}
+
+.dock-user-desc strong {
+    color: #FFFFFF;
+    display: block;
+}
+
+.dock-role-options {
+    display: flex;
+    gap: 6px;
+}
+
+.dock-role-btn {
+    flex: 1;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: #94A3B8;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: center;
+}
+
+.dock-role-btn:hover {
+    background: rgba(247, 148, 29, 0.15);
+    border-color: #F7941D;
+    color: #FFFFFF;
+}
+
+.dock-role-btn.active {
+    background: #F7941D;
+    border-color: #F7941D;
+    color: #FFFFFF;
+}
+
+/* View links grid */
+.dock-view-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dock-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+
+.dock-link-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.06);
+    transform: translateX(2px);
+}
+
+.dock-link-item.active {
+    background: rgba(247, 148, 29, 0.2);
+    border-color: rgba(247, 148, 29, 0.4);
+    color: #F7941D;
+    font-weight: 700;
+}
+
+.dock-link-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dock-link-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #94A3B8;
+    font-weight: 600;
+}
+
+.dock-link-item.active .dock-link-badge {
+    background: #F7941D;
+    color: #FFFFFF;
+}
+
+.dock-footer {
+    padding: 12px 18px;
+    background: #0F172A;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dock-reset-btn {
+    background: transparent;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    color: #94A3B8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.dock-reset-btn:hover {
+    border-color: #E53935;
+    color: #E53935;
+    background: rgba(229, 57, 53, 0.1);
+}
+
+.dock-gh-badge {
+    font-size: 11px;
+    color: #64748B;
+}
+
+@media (max-width: 480px) {
+    .dock-panel {
+        width: calc(100vw - 32px);
+        right: -8px;
+    }
+}

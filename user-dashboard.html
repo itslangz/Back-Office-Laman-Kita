@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Pegawai · BOLATA</title>
+    <link rel="icon" type="image/png" href="images/maskot.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/demo-dock.css">
+</head>
+<body class="user-page">
+    <header class="user-topbar" id="user-topbar">
+        <div class="user-topbar-inner">
+            <a href="#dashboard" class="user-brand">
+                <span class="brand-mark"><img src="images/logobps.png" alt="Logo BPS"></span>
+                <span class="brand-text">
+                    <span class="brand-name">BOLATA</span>
+                    <span class="brand-sub">Back Office LAman KiTA</span>
+                </span>
+            </a>
+
+            <nav class="user-nav" id="user-nav">
+                <a href="#dashboard" class="user-nav-link active">Dashboard</a>
+                <a href="#tim" class="user-nav-link">Tim</a>
+                <a href="#inovasi" class="user-nav-link">Inovasi</a>
+            </nav>
+
+            <div class="user-topbar-actions">
+                <div class="topbar-user">
+                    <span class="avatar avatar-sm" id="user-avatar-top">B</span>
+                    <div class="topbar-user-info">
+                        <span class="topbar-user-name" id="user-name-top">Budi Santoso</span>
+                        <span class="topbar-user-role" id="user-role-top">Pegawai</span>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm logout-btn">Keluar</button>
+                <button type="button" class="icon-btn" id="user-nav-toggle" aria-label="Buka menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="user-main">
+        <!-- SECTION HERO -->
+        <section id="dashboard" class="hero-header">
+            <div class="hero-header-inner">
+                <div class="hero-header-row">
+                    <div class="hero-header-text">
+                        <span class="hero-header-eyebrow">Selamat Datang</span>
+                        <h1 class="hero-header-title" id="hero-welcome-title">Selamat Datang, Budi Santoso!</h1>
+                        <p class="hero-header-text-p">
+                            BOLATA (Back Office LAman KiTA) adalah wadah bagi pegawai untuk saling mengakses link antar tim
+                            dan link inovasi. Gunakan menu di atas untuk menelusuri tim dan inovasi.
+                        </p>
+                        <span class="badge badge-hero" id="hero-team-badge">Tim Anda: Tim Teknologi Informasi</span>
+                    </div>
+                    <div class="hero-header-mascot">
+                        <img src="images/maskot.png" alt="Maskot BOLATA">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="user-content">
+            <!-- SECTION FITUR -->
+            <section class="user-section">
+                <div class="feature-grid">
+                    <a href="#tim" class="feature-item">
+                        <span class="feature-item-icon feature-icon-primary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </span>
+                        <span class="feature-item-value" id="stat-total-teams" data-count="3">3</span>
+                        <span class="feature-item-label">Total Tim</span>
+                    </a>
+                    <div class="feature-item">
+                        <span class="feature-item-icon feature-icon-info">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </span>
+                        <span class="feature-item-value" id="stat-total-links" data-count="6">6</span>
+                        <span class="feature-item-label">Link Tim</span>
+                    </div>
+                    <a href="#inovasi" class="feature-item">
+                        <span class="feature-item-icon feature-icon-warning">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/></svg>
+                        </span>
+                        <span class="feature-item-value" id="stat-total-innovations" data-count="2">2</span>
+                        <span class="feature-item-label">Link Inovasi</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SECTION TIM -->
+            <section id="tim" class="user-section">
+                <div class="overview-head">
+                    <span class="overview-num">01</span>
+                    <span class="overview-line"></span>
+                    <div>
+                        <h2 class="overview-title">Tim</h2>
+                        <p class="overview-desc">Akses link dan sumber daya setiap tim.</p>
+                    </div>
+                </div>
+
+                <div class="team-grid" id="teams-container">
+                    <!-- Hydrated dynamically by renderTeams() -->
+                </div>
+            </section>
+
+            <!-- SECTION INOVASI -->
+            <section id="inovasi" class="user-section">
+                <div class="overview-head">
+                    <span class="overview-num">02</span>
+                    <span class="overview-line"></span>
+                    <div>
+                        <h2 class="overview-title">Inovasi</h2>
+                        <p class="overview-desc">Temukan inovasi dan ide yang tersedia di BOLATA.</p>
+                    </div>
+                </div>
+
+                <div class="team-grid" id="innovations-container">
+                    <!-- Hydrated dynamically by renderInnovations() -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="user-footer">
+        <p>© 2026 BOLATA — Back Office LAman Kita</p>
+    </footer>
+
+    <a href="#dashboard" class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </a>
+
+    <script src="js/data-store.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/demo-dock.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentUser = BolataStore.getCurrentUser();
+            // If current user is admin, for this view set to sample pegawai Budi so it's a realistic view
+            if (!currentUser || currentUser.role === 'admin') {
+                currentUser = BolataStore.getUser(2) || { id: 2, name: 'Budi Santoso', email: 'budi@bolata.test', role: 'pegawai', team_id: 1 };
+            }
+
+            const initial = currentUser.name.charAt(0).toUpperCase();
+            document.getElementById('user-avatar-top').textContent = initial;
+            document.getElementById('user-name-top').textContent = currentUser.name;
+            document.getElementById('user-role-top').textContent = 'Pegawai';
+            document.getElementById('hero-welcome-title').textContent = `Selamat Datang, ${currentUser.name}!`;
+
+            const team = currentUser.team_id ? BolataStore.getTeam(currentUser.team_id) : null;
+            if (team) {
+                document.getElementById('hero-team-badge').textContent = `Tim Anda: ${team.name}`;
+            } else {
+                document.getElementById('hero-team-badge').textContent = 'Anda belum tergabung dalam tim';
+            }
+
+            // Stats
+            const teams = BolataStore.getTeams();
+            const totalLinks = teams.reduce((acc, t) => acc + (t.links_count || 0), 0);
+            const innovations = BolataStore.getInnovationLinks();
+
+            document.getElementById('stat-total-teams').textContent = teams.length;
+            document.getElementById('stat-total-teams').dataset.count = teams.length;
+
+            document.getElementById('stat-total-links').textContent = totalLinks;
+            document.getElementById('stat-total-links').dataset.count = totalLinks;
+
+            document.getElementById('stat-total-innovations').textContent = innovations.length;
+            document.getElementById('stat-total-innovations').dataset.count = innovations.length;
+
+            // Render Teams
+            const teamsContainer = document.getElementById('teams-container');
+            if (teams.length === 0) {
+                teamsContainer.innerHTML = '<p class="empty">Belum ada tim.</p>';
+            } else {
+                teamsContainer.innerHTML = teams.map(t => {
+                    const linksHtml = (t.links && t.links.length > 0)
+                        ? t.links.map(l => `
+                            <a href="${l.url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+                                ${l.title}<span class="btn-arrow">→</span>
+                            </a>
+                        `).join('')
+                        : '<p class="team-card-empty">Belum ada link untuk tim ini.</p>';
+
+                    return `
+                        <article class="team-card">
+                            <div class="team-logo">${t.name.charAt(0).toUpperCase()}</div>
+                            <h3 class="team-card-title">${t.name}</h3>
+                            <p class="team-card-desc">${t.description || '-'}</p>
+                            <div class="team-card-links">
+                                ${linksHtml}
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            }
+
+            // Render Innovations
+            const innovationsContainer = document.getElementById('innovations-container');
+            if (innovations.length === 0) {
+                innovationsContainer.innerHTML = '<p class="empty">Belum ada inovasi.</p>';
+            } else {
+                innovationsContainer.innerHTML = innovations.map(l => `
+                    <article class="team-card">
+                        <div class="team-logo team-logo-info">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/></svg>
+                        </div>
+                        <h3 class="team-card-title">${l.title}</h3>
+                        <p class="team-card-desc">${l.description || '-'}</p>
+                        <div class="team-card-links">
+                            <a href="${l.url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+                                Buka Link<span class="btn-arrow">→</span>
+                            </a>
+                        </div>
+                    </article>
+                `).join('');
+            }
+        });
+    </script>
+</body>
+</html>
